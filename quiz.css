@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: #4e73df;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Container for options stacked line-by-line */
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+/* Individual Option Buttons (Generated via JS) */
+.btn {
+    all: unset;
+    display: block;
+    padding: 15px;
+    background: #f8f9fc;
+    color: #000000;
+    border: 2px solid #e3e6f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    text-align: left;
+}
+
+.btn:hover {
+    background: #4e73df;
+    color: #fff;
+    border-color: #4e73df;
+    transform: translateX(8px);
+}
+
+/* Styling for the Next Button */
+#next-btn {
+    background: #1cc88a;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(28, 200, 138, 0.3);
+}
+
+#next-btn:hover {
+    background: #17a673;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(28, 200, 138, 0.4);
+}
+
+#next-btn:hidden {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 85%;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 1.3rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start; 
+        padding-top: 50px;
+    }
+
+    .quiz-container {
+        width: 90%;
+        padding: 20px;
+        border-radius: 15px; 
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 12px; 
+        font-size: 14px;
+    }
+
+    #next-btn {
+        width: 100%; 
+        border-radius: 12px; 
+        padding: 15px;
+    }
+}
+
